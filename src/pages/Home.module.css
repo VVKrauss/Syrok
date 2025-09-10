@@ -1,0 +1,234 @@
+/* Full-width banner */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 500px;
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 50%, #ced4da 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #495057;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.bannerTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: #343a40;
+  line-height: 1.2;
+}
+
+.bannerSubtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.bannerButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bannerPrimaryButton {
+  background: #6c757d;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+.bannerPrimaryButton:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+  color: white;
+}
+
+.bannerSecondaryButton {
+  background: transparent;
+  color: #6c757d;
+  padding: 1rem 2.5rem;
+  border: 2px solid #6c757d;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.bannerSecondaryButton:hover {
+  background: #6c757d;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.3);
+}
+
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  z-index: 1;
+}
+
+/* Main content */
+.home {
+  background: #f8f9fa;
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.quickNav {
+  text-align: center;
+}
+
+.quickNav h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.navDescription {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #6c757d;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.navCard {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.navCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border-color: #dee2e6;
+}
+
+.navIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.navCard h3 {
+  font-family: 'Playfair Display', serif;
+  color: #495057;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.navCard p {
+  color: #6c757d;
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .banner {
+    height: 50vh;
+    min-height: 400px;
+  }
+  
+  .bannerTitle {
+    font-size: 2.5rem;
+  }
+  
+  .bannerSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .bannerButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bannerPrimaryButton,
+  .bannerSecondaryButton {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .quickNav h2 {
+    font-size: 2rem;
+  }
+  
+  .navGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .navCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .home {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerContent {
+    padding: 0 1rem;
+  }
+  
+  .bannerTitle {
+    font-size: 2rem;
+  }
+  
+  .bannerSubtitle {
+    font-size: 1rem;
+  }
+  
+  .navCard {
+    padding: 1.5rem 1rem;
+  }
+}
