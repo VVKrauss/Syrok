@@ -111,9 +111,9 @@ const BlockArticleEditor: React.FC<BlockArticleEditorProps> = ({
     }
   }
 
-  const handleInputChange = useCallback((field: string, value: string) => {
-    // НЕ обновляем состояние - используем refs
-  }, [])
+  // const handleInputChange = useCallback((_field: string, _value: string) => {
+  //   // НЕ обновляем состояние - используем refs
+  // }, [])
 
   const handleFeaturedImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0]

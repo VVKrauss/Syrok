@@ -26,7 +26,7 @@ const ArticleBlock: React.FC<ArticleBlockProps> = ({
   onMoveDown
 }) => {
   const [isEditing, setIsEditing] = useState(false)
-  const [uploading, setUploading] = useState(false)
+  const [uploading, setUploading] = useState(false) // eslint-disable-line @typescript-eslint/no-unused-vars
   const [showLinkDialog, setShowLinkDialog] = useState(false)
   const [linkUrl, setLinkUrl] = useState('')
   const [selectedText, setSelectedText] = useState('')
@@ -226,7 +226,7 @@ const ArticleBlock: React.FC<ArticleBlockProps> = ({
                     id={`image-${block.id}`}
                   />
                   <label htmlFor={`image-${block.id}`} className={styles.uploadButton}>
-                    Загрузить файл
+                    {uploading ? 'Загрузка...' : 'Загрузить файл'}
                   </label>
                 </div>
               </div>
